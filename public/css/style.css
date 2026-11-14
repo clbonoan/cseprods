@@ -28,9 +28,12 @@ html, body {
     color: white;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     height: 100%;
     max-width: 100%;
+}
+
+html, body {
+    overflow-x: clip;
 }
 
 .nav-logo {
@@ -62,8 +65,14 @@ html, body {
     margin-bottom: 12px;
 }
 
+.hero {
+    padding-top: 110px;
+    min-height: 100svh;
+}
+
 .hero-title {
-    font-size: 50px;
+    font-size: clamp(40px, 9vw, 90px);
+    line-height: 1;
     margin: 0;
 }
 
