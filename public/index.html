@@ -6,17 +6,21 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>CSE Productions</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:wght,FILL@100..700,0..1&display=block">
 </head>
 
 <body>
     <!-- tailwind nav bar -->
-    <nav class="bg-[#181715]/30 flex items-center fixed w-full top-0 py-5 text-[24px] z-50">
+    <nav class="bg-[#181715]/40 flex items-center justify-between fixed w-full top-0 py-1 px-8 text-[24px] z-50">
         <!-- left side nav (logo) -->
-        <div class="absolute left-5 md:left-8">
-            <a href="index.html" class="text-white font-normal no-underline">CSE Productions</a>
-        </div>
-        <!-- center nav -->
-        <div class="hidden md:flex gap-[48px] mx-auto" id="nav-links">
+        <!-- <a href="index.html" class="text-white font-normal no-underline whitespace-nowrap">CSE Productions</a> -->
+        <a href="index.html" class="nav-logo no-underline">
+            <img src="images/cseproductions-logo.png" alt="CSE Productions" class="nav-logo-img">
+        </a>
+
+        <!-- right nav (section links)-->
+        <div class="hidden lg:flex gap-8 xl:gap-[48px]" id="nav-links">
             <a href="index.html" class="text-white font-normal no-underline hover:text-[#fe1f00]">HOME</a>
             <a href="events.html" class="text-white font-normal no-underline hover:text-[#fe1f00]">EVENTS</a>
             <a href="about.html" class="text-white font-normal no-underline hover:text-[#fe1f00]">ABOUT</a>
@@ -25,11 +29,22 @@
         </div> 
 
         <!-- hamburger button for mobile view -->
-        <button id="menu-btn" onclick="toggleMenu()" class="md:hidden absolute right-5 text-white font-normal text-[15px]
-            bg-transparent border-none cursor-pointer tracking-widest">MENU</button>
+        <button id="menu-button" onclick="toggleMenu()" aria-label="open menu" class="lg:hidden text-white font-normal text-[24px]
+        bg-transparent border-none cursor-pointer p-1">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square">
+                <line x1="3" y1="6"  x2="21" y2="6"  />  <!-- top -->
+                <line x1="3" y1="12" x2="21" y2="12" />  <!-- middle -->
+                <line x1="3" y1="18" x2="21" y2="18" />  <!-- bottom -->
+            </svg>
+            <svg id="icon-close" class="w-8 h-8 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="square">
+                <line x1="5"  y1="5" x2="19" y2="19" />  <!-- top left to bottom right -->
+                <line x1="19" y1="5" x2="5"  y2="19" />  <!-- top right to bottom left -->
+            </svg>
+        </button>
     </nav>
 
-    <div id="mobile-menu" class="hidden flex-col gap-4 py-8 pt-16 fixed inset-0 w-full h-full bg-[#181715] z-40">
+    <div id="mobile-menu" class="mobile-menu hidden flex-col fixed inset-0 w-full h-full bg-[#181715]/40 backdrop-blur-md z-40">
         <a href="./index.html" class="text-white font-medium no-underline hover:text-[#fe1f00] text-6xl tracking-tight">HOME</a>
         <a href="./events.html" class="text-white font-medium no-underline hover:text-[#fe1f00] text-6xl tracking-tight">EVENTS</a>
         <a href="./about.html" class="text-white font-medium no-underline hover:text-[#fe1f00] text-6xl tracking-tight">ABOUT</a>
@@ -44,7 +59,7 @@
         <div class="hero-overlay absolute inset-0"></div>
         <div class="relative w-full px-5 md:px-8 pb-10 md:pb-14 grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
             <!-- headline -->
-            <div class="bg-[#181715]/30 p-5 md:p-8 justify-self-start">
+            <div class="bg-[#181715]/40 p-5 md:p-8 justify-self-start">
                 <p class="hero-label text-[#fbf7f4] text-xl md:text-3xl tracking-[3px] md:tracking-[4px]">
                     EVENT &amp; CONCERT PRODUCTION
                 </p>
@@ -54,7 +69,7 @@
             </div>
 
             <!-- right column: show next event date and contact -->
-            <div class="max-w-sm bg-[#181715]/30 p-5 md:p-8">
+            <div class="max-w-sm bg-[#181715]/40 p-5 md:p-8">
                 <div class="flex items-baseline gap-3 text-[#fbf7f4]">
                     <span class="text-5xl md:text-6xl">FEB 12</span>
                     <span class="text-xl md:text-3xl">2027</span>
@@ -63,16 +78,16 @@
                     From the stage to the sound, we handle the production so the night runs seamlessly.
                 </p>
 
-                <a href="contact.html" class="cta flex items-stretch w-fit no-underline">
-                    <span class="bg-[#fe1f00] text-white text-2xl px-6 py-4 flex items-center">GET IN TOUCH</span>
-                    <span class="bg-[#fbf7f4] text-[#181715] text-2xl px-6 flex items-center cta-arrow">&rarr;</span>
+                <a href="contact.html" class="cta inline-flex items-center gap-4 h-14 md:h-16 px-8 bg-[#fe1f00] 
+                text-white text-2xl leading-none no-underline hover:bg-white hover:text-[#fe1f00]">
+                    GET IN TOUCH
+                    <span class="cta-arrow material-symbols-sharp">arrow_forward</span>
                 </a>
             </div>
         </div>
 
     </header>
 
-    
     <main>
 
     </main>
